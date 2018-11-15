@@ -12,42 +12,54 @@ phonebook_dict = {
 print phonebook_dict['Elizabeth']
 # Add a entry to the dictionary: Kareem's number is 938-489-1234.
 phonebook_dict['Kareem'] = '938-489-1234'
-print phonebook_dict
+
 
 # Delete Alice's phone entry.
 del phonebook_dict['Alice']
-print phonebook_dict
 
 # Change Bob's phone number to '968-345-2345'.
+phonebook_dict['Bob'] = '968-345-2345'
+
+
 # Print all the phone entries.
+print phonebook_dict
+
 # In this exercise, are you using dynamic keys or fixed keys?
+# dynamic
 
 # Exercise 2: Nested Dictionaries
-# ramit = {
-#   'name': 'Ramit',
-#   'email': 'ramit@gmail.com',
-#   'interests': ['movies', 'tennis'],
-#   'friends': [
-#     {
-#       'name': 'Jasmine',
-#       'email': 'jasmine@yahoo.com',
-#       'interests': ['photography', 'tennis']
-#     },
-#     {
-#       'name': 'Jan',
-#       'email': 'jan@hotmail.com',
-#       'interests': ['movies', 'tv']
-#     }
-#   ]
-# }
+ramit = {
+  'name': 'Ramit',
+  'email': 'ramit@gmail.com',
+  'interests': ['movies', 'tennis'],
+  'friends': [
+    {
+      'name': 'Jasmine',
+      'email': 'jasmine@yahoo.com',
+      'interests': ['photography', 'tennis']
+    },
+    {
+      'name': 'Jan',
+      'email': 'jan@hotmail.com',
+      'interests': ['movies', 'tv']
+    }
+  ]
+}
 # Write a python expression that gets the email address of Ramit.
+print ramit['email']
 # Write a python expression that gets the first of Ramit's interests.
+print ramit['interests'][0]
 # Write a python expression that gets the email address of Jasmine.
+print ramit['friends'][0]['email']
 # Write a python expression that gets the second of Jan's two interests.
+print ramit['friends'][1]['interests'][1]
 # In this exercise, are you using dynamic keys or fixed keys?
+# fixed
 
 # Letter Summary
 # Write a letter_histogram function that takes a word as its input, and returns a dictionary containing the tally of how many times each letter in the alphabet was used in the word. For example:
+
+# .count() method for counting number of times of substring
 
 # >>> letter_histogram('banana')
 # {'a': 3, 'b': 1, 'n': 2}
