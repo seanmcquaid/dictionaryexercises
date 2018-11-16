@@ -73,7 +73,7 @@ def letter_histogram(word):
       dict[char] = 1
   return dict
 
-print letter_histogram("shrimp")
+print letter_histogram("aard")
 
 
 # In this exercise, are you using dynamic keys or fixed keys?
