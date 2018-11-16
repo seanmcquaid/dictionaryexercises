@@ -57,19 +57,36 @@ print ramit['friends'][1]['interests'][1]
 # fixed
 
 # Letter Summary
-# Write a letter_histogram function that takes a word as its input, and returns a dictionary containing the tally of how many times each letter in the alphabet was used in the word. For example:
-
-# .count() method for counting number of times of substring
-
+# Write a letter_histogram function that takes a word as its input, 
+# and returns a dictionary containing the tally of how many times each letter 
+# in the alphabet was used in the word. For example:
 # >>> letter_histogram('banana')
 # {'a': 3, 'b': 1, 'n': 2}
+
+def letter_histogram(word):
+  dict = {}
+  for char in word:
+    keys = dict.keys()
+    if char in keys:
+      dict[char] += 1
+    else:
+      dict[char] = 1
+  return dict
+
+print letter_histogram("shrimp")
+
+
 # In this exercise, are you using dynamic keys or fixed keys?
 
 # Word Summary
-# Write a word_histogram function that takes a paragraph of text as its input, and returns a dictionary containing the tally of how many times each letter in the alphabet was used in the text. For example:
+# Write a word_histogram function that takes a paragraph of text as its input, 
+# and returns a dictionary containing the tally of how many times each letter 
+# in the alphabet was used in the text. For example:
 
 # >>> word_histogram('To be or not to be')
 # {'to': 2, 'be': 2, 'or': 1, 'not': 1}
+
+
 # In this exercise, are you using dynamic keys or fixed keys?
 
 # Bonus Challenge
